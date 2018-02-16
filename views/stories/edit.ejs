@@ -1,0 +1,42 @@
+<% include ../partials/header %>
+
+<h1>Edit a story</h1>
+<div class="row">
+  <form class="col s12" action="/stories/<%=story._id%>?_method=PUT" method="post">
+    <div class="row">
+      <div class="input-field">
+        <input type="text" name="title" value="<%=story.title%>">
+        <label for="title">Title</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field">
+        <select name="status" id="selected">
+          <option value="public" <%if(story.status == "public"){%> selected <%}%>>Public</option>
+          <option value="private" <%if(story.status == "private"){%> selected <%}%> >Private</option>
+          <option value="unpublished" <%if(story.status == "unpublished"){%> selected <%}%> >Unpublished</option>
+        </select>
+        <label for="status">Status</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <p>
+        <input type="checkbox" name="comments" class="filled-in" id="filled-in-box" <%if(story.allowComments){%> checked="checked" <%}%>>
+        <label for="filled-in-box">Allow comments</label>
+      </p>
+    </div>
+
+    <div class="row">
+      <div class="input-field">
+        <h5>Your story goes here</h5>
+        <textarea name="body"><%=story.body%></textarea>
+      </div>
+    </div>
+
+    <input type="submit" value="Save" class="btn">
+  </form>
+</div>
+
+<% include ../partials/footer %>

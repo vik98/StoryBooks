@@ -1,0 +1,42 @@
+</div>
+</main>
+<footer class="page-footer grey darken-3">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">StoryBooks</h5>
+                <p class="grey-text text-lighten-4">Discover the world through the stories</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="/stories">Public Stories</a></li>
+                  <li><a class="grey-text text-lighten-3" href="/about">About Page</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2018 StoryBooks
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="https://cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function(req, res){
+    $(".button-collapse").sideNav();
+    $("select").material_select();
+  });
+
+  CKEDITOR.replace("body", {
+    plugins: "wysiwygarea,toolbar,basicstyles,link"
+  });
+</script>
+</body>
+
+</html>
