@@ -43,7 +43,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json())
 app.use(cookieParser());
 app.use(session({
-  secret: "Fuck all hoes",
+  secret: "Random",
   resave: false,
   saveUninitialized: false
 }));
